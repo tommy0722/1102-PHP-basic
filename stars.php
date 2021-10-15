@@ -47,32 +47,7 @@ for($a = 8 ; $a>0 ;$a=$a-1){
     echo "<br>";
 }
 
-//echo "*****<br>";
-/* for($i=0;$i<$a;$i++){
-    echo "*";
-}
-echo "<br>";
-//echo "****<br>";
-4
-for($i=0;$i<$a;$i++){，
-    echo "*";
-}
-echo "<br>";
-//echo "***<br>";
-for($i=0;$i<$a;$i++){
-    echo "*";
-}
-echo "<br>";
-//echo "**<br>";
-for($i=0;$i<$a;$i++){
-    echo "*";
-}
-echo "<br>";
-//echo "*<br>";
-for($i=0;$i<$a;$i++){
-    echo "*";
-}
-echo "<br>"; */
+
 echo "<hr>";
 echo "&ensp;&ensp;&ensp;&ensp;*<br>";
 echo "&ensp;&ensp;&ensp;***<br>";
@@ -93,47 +68,6 @@ for($j=1;$j<=$row;$j++){
     }
     echo "<br>";
 }
-/* //--------------------
-$row=2;
-for($i=0;$i<(5-$row);$i++){
-    echo "&ensp;";
-}
-
-for($i=0;$i<(2*$row-1);$i++){
-    echo "*";
-}
-echo "<br>";
-//--------------------
-$row=3;
-for($i=0;$i<(5-$row);$i++){
-    echo "&ensp;";
-}
-
-for($i=0;$i<(2*$row-1);$i++){
-    echo "*";
-}
-echo "<br>";
-//--------------------
-$row=4;
-for($i=0;$i<(5-$row);$i++){
-    echo "&ensp;";
-}
-
-for($i=0;$i<(2*$row-1);$i++){
-    echo "*";
-}
-echo "<br>";
-//--------------------
-$row=5;
-for($i=0;$i<(5-$row);$i++){
-    echo "&ensp;";
-}
-
-for($i=0;$i<(2*$row-1);$i++){
-    echo "*";
-}
- */
-
 ?>
 
 
