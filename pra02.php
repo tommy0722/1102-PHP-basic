@@ -53,4 +53,6 @@ for($i=0;$i<mb_strlen($str);$i++){
         break;
     }
 }
+
+echo "hello";
 ?>
