@@ -5,12 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>建立陣列練習</title>
-    <style>
-        h1{
-            text-align:center;
-        }
-`
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1> 建立陣列練習 </h1>
