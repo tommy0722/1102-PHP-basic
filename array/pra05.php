@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>天干地支年</h1>
+    <h1>天干地支年 <a href="index.html">回目錄</a></h1>
     <?php
     //1984 甲子年
     $sky=[ '甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸',];

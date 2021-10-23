@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <h1>利用程式來產生陣列</h1>   
+ <h1>利用程式來產生陣列 <a href="index.html">回目錄</a></h1>   
 
 
 

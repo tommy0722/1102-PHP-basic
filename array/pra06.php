@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>反轉陣列</h1>
+    <h1>反轉陣列 <a href="index.html">回目錄</a></h1>
     <?php
 $a=[2,4,6,1,8,9] ;
 echo "<pre>";

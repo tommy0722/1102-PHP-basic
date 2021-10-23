@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>找出五百年內的閏年</h1>
+    <h1>找出五百年內的閏年 <a href="index.html">回目錄</a></h1>
 
     <?php
     $year=2021;

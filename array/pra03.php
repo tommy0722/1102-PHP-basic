@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>威力彩電腦選號沒有重覆號碼</h1>
+    <h1>威力彩電腦選號沒有重覆號碼 <a href="index.html">回目錄</a></h1>
     <?php
     $nums=[];
     $i=0;
