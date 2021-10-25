@@ -26,5 +26,14 @@
         echo "新檔名為:".$newFileName;
 
     ?>
+    <h1>字串組合</h1>
+    <h3>將上例陣列重新組合成“this is a book”</h3>
+    <?php
+        echo implode(" ",$array);
+        echo "<hr>";
+        echo join(" ",$array);
+
+
+    ?>
 </body>
 </html>
