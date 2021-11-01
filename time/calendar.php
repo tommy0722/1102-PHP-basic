@@ -20,13 +20,18 @@
         .dayoff{
             background-color:pink;
         }
+        .special-date{
+            background-color:black;
+            color:white;
+        }
     </style>
 </head>
 <body>
     <h1>線上月曆</h1>
 
     <?php
-
+    $specialDate=['2021-11-15'=>'發薪水','2021-12-25'=>'聖誕節'];
+   //echo $specialDate['2011-11-11'];
 /*     $firstDay=date("Y-m-01");
     $month=date("m"); */
     $firstDay=date("Y-m-01");
@@ -67,7 +72,6 @@
         if($i==0){
             //印空白日
             for($k=0;$k<$firstWeekWhiteDays;$k++){
-
                 echo "<td>";
                 echo "&nbsp;";
                 echo "</td>";
@@ -76,15 +80,23 @@
             for($l=0;$l<$firstWeekDays;$l++){
                 $date=date("Y-m-").($i*7+$l+1);
                 $w=date('w',strtotime($date));
-                if($w==0 || $w==6){
-
-                    echo "<td class='dayoff'>";
-                    
+                
+                if(array_key_exists($date,$specialDate)){
+                    $sp='special-date';
                 }else{
-                    echo "<td>";
+                    $sp='';
+                }
 
+                if($w==0 || $w==6){
+                    echo "<td class='dayoff $sp'>";
+                }else{
+                    echo "<td class='$sp'>";
                 }
                 echo $i*7+$l+1;
+                echo "<br>";
+                if(!empty($sp)){
+                    echo $specialDate[$date];
+                }
                 echo "</td>";
             }
             
@@ -92,15 +104,24 @@
             for($m=0;$m<$lastWeekDays;$m++){
                 $date=date("Y-m-").($i*7+$m+1-$firstWeekWhiteDays);
                 $w=date('w',strtotime($date));
+                if(array_key_exists($date,$specialDate)){
+                    $sp='special-date';
+                }else{
+                    $sp='';
+                }
                 if($w==0 || $w==6){
 
-                    echo "<td class='dayoff'>";
+                    echo "<td class='dayoff $sp'>";
                     
                 }else{
-                    echo "<td>";
+                    echo "<td class='$sp'>";
 
                 }
                 echo $i*7+$m+1-$firstWeekWhiteDays;
+                echo "<br>";
+                if(!empty($sp)){
+                    echo $specialDate[$date];
+                }
                 echo "</td>";
             }
             for($n=0;$n<$lastWeekWhiteDays;$n++){
@@ -114,15 +135,24 @@
             for($j=0;$j<7;$j++){
                 $date=date("Y-m-").($i*7+$j+1-$firstWeekWhiteDays);
                 $w=date('w',strtotime($date));
+                if(array_key_exists($date,$specialDate)){
+                    $sp='special-date';
+                }else{
+                    $sp='';
+                }
                 if($w==0 || $w==6){
 
-                    echo "<td class='dayoff'>";
+                    echo "<td class='dayoff $sp'>";
                     
                 }else{
-                    echo "<td>";
+                    echo "<td class='$sp'>";
 
                 }
                 echo $i*7+$j+1-$firstWeekWhiteDays;
+                echo "<br>";
+                if(!empty($sp)){
+                    echo $specialDate[$date];
+                }
                 echo "</td>";
     
             }
