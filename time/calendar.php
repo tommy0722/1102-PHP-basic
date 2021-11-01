@@ -161,5 +161,48 @@
     }
     echo "</table>";
     ?>
+
+<style>
+.cell{
+    width:50px;
+    height:50px;
+    border:1px solid #999;
+    /* display:inline-block; */
+    margin:0;
+    box-sizing:border-box;
+}
+
+.calendar{
+    width:352px;
+    height:352px;
+    margin:auto;
+    border:1px solid red;
+    box-sizing:border-box;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+</style>
+
+<div class="calendar">
+    
+<?php
+    $td=['周日','周一','周二','周三','周四','周五','周六',
+         '',1,2,3,4,5,6];
+
+for($i=0;$i<49;$i++){
+    if($i<14){
+        echo "<div class='cell'>";
+        echo $td[$i];
+        echo "</div>";
+
+    }else{
+
+        echo "<div class='cell'></div>";
+    }
+}
+
+?>
+</div>
 </body>
 </html>
