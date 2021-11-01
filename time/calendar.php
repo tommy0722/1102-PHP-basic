@@ -219,8 +219,12 @@
 
 
 for($i=0;$i<$allCells;$i++){
+    $date=date("Y-m-").($i+1);
     echo "<div class='cell'>";
     echo $td[$i];
+    if(array_key_exists($date,$specialDate)){
+        echo $specialDate[$date];
+    }
     echo "</div>";
 }
 
