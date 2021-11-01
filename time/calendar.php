@@ -17,6 +17,9 @@
             text-align: center;
             border:1px solid black;
         }
+        .dayoff{
+            background-color:pink;
+        }
     </style>
 </head>
 <body>
@@ -71,16 +74,32 @@
             }
             
             for($l=0;$l<$firstWeekDays;$l++){
-                
-                echo "<td>";
+                $date=date("Y-m-").($i*7+$l+1);
+                $w=date('w',strtotime($date));
+                if($w==0 || $w==6){
+
+                    echo "<td class='dayoff'>";
+                    
+                }else{
+                    echo "<td>";
+
+                }
                 echo $i*7+$l+1;
                 echo "</td>";
             }
             
         }elseif($i==$weeks-1){
             for($m=0;$m<$lastWeekDays;$m++){
-                
-                echo "<td>";
+                $date=date("Y-m-").($i*7+$m+1-$firstWeekWhiteDays);
+                $w=date('w',strtotime($date));
+                if($w==0 || $w==6){
+
+                    echo "<td class='dayoff'>";
+                    
+                }else{
+                    echo "<td>";
+
+                }
                 echo $i*7+$m+1-$firstWeekWhiteDays;
                 echo "</td>";
             }
@@ -93,8 +112,16 @@
         }else{
 
             for($j=0;$j<7;$j++){
-                
-                echo "<td>";
+                $date=date("Y-m-").($i*7+$j+1-$firstWeekWhiteDays);
+                $w=date('w',strtotime($date));
+                if($w==0 || $w==6){
+
+                    echo "<td class='dayoff'>";
+                    
+                }else{
+                    echo "<td>";
+
+                }
                 echo $i*7+$j+1-$firstWeekWhiteDays;
                 echo "</td>";
     
