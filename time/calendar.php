@@ -201,6 +201,7 @@
     $allCells=($weeks+1)*7;
     //陣列中加入首列資料
     $td=['周日','周一','周二','周三','周四','周五','周六'];
+
     //陣列中加入月前空白;
     for($i=0;$i<$firstWeekWhiteDays;$i++){
         $td[]="";
@@ -219,8 +220,18 @@
 
 
 for($i=0;$i<$allCells;$i++){
-    $date=date("Y-m-").($i+1);
-    echo "<div class='cell'>";
+    if(is_numeric($td[$i])){
+        $date=date("Y-m-").$td[$i];
+        $w=date("w",strtotime($date));
+    }
+    
+    if($w==0 || $w==6){
+
+        echo "<div class='dayoff cell'>";
+    }else{
+
+        echo "<div class='cell'>";
+    }
     echo $td[$i];
     if(array_key_exists($date,$specialDate)){
         echo $specialDate[$date];
