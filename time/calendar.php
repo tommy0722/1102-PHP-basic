@@ -180,26 +180,48 @@
     box-sizing:border-box;
     display:flex;
     flex-wrap:wrap;
+    align-content:start;
+    justify-content:start;
 }
 
 </style>
+<?php
+    $specialDate=['2021-11-15'=>'發薪水','2021-12-25'=>'聖誕節'];
+   //echo $specialDate['2011-11-11'];
+/*     $firstDay=date("Y-m-01");
+    $month=date("m"); */
+    $firstDay=date("Y-m-01");
+    $month=date("m");
+    $firstWeekWhiteDays=date("w",strtotime($firstDay));
+    $monthDays=date("t",strtotime($firstDay));
+    $firstWeekDays=7-$firstWeekWhiteDays;
+    $weeks=ceil(($firstWeekWhiteDays+$monthDays)/7);
+    $lastWeekDays=($firstWeekWhiteDays+$monthDays)%7;
+    $lastWeekWhiteDays=7-$lastWeekDays;
+    $allCells=($weeks+1)*7;
+    //陣列中加入首列資料
+    $td=['周日','周一','周二','周三','周四','周五','周六'];
+    //陣列中加入月前空白;
+    for($i=0;$i<$firstWeekWhiteDays;$i++){
+        $td[]="";
+    }
+    for($i=0;$i<$monthDays;$i++){ //決定當月有幾周
+        $td[]=($i+1);
+    }
+   for($i=0;$i<$lastWeekWhiteDays;$i++){
+        $td[]="";
+    }
 
+    ?>
 <div class="calendar">
     
 <?php
-    $td=['周日','周一','周二','周三','周四','周五','周六',
-         '',1,2,3,4,5,6];
 
-for($i=0;$i<49;$i++){
-    if($i<14){
-        echo "<div class='cell'>";
-        echo $td[$i];
-        echo "</div>";
 
-    }else{
-
-        echo "<div class='cell'></div>";
-    }
+for($i=0;$i<$allCells;$i++){
+    echo "<div class='cell'>";
+    echo $td[$i];
+    echo "</div>";
 }
 
 ?>
