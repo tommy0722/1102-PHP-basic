@@ -6,9 +6,9 @@ $a=24*60*60;
 
 echo $a;
 
-$first_name = "劉";
+$first_name = "何";
 
-$last_name = "勤永";
+$last_name = "誠信";
 
 $full_name = $first_name . $last_name;
 
